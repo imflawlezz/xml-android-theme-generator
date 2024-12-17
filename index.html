@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android XML Theme Generator by imflawlezz</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Android XML Theme Generator</h1>
+    <h3 id="headerLink">Release version 0.1<br>by <a href="https://github.com/imflawlezz">imflawlezz</a>.</h3>
+    
+    <form id="themeForm">
+        <label for="appName">App Name:</label>
+        <input type="text" id="appName" placeholder="My Application">
+
+        <label for="primaryColor">Primary Color:</label>
+        <input type="color" id="primaryColor" value="#AA3232">
+
+        <label>Secondary Color Generation Method:</label>
+        <label><input type="radio" name="secondaryMethod" value="similar" checked> Similar to Primary</label>
+        <label><input type="radio" name="secondaryMethod" value="complementary"> Complementary</label>
+
+        <label for="fontSize">Base Font Size (sp):</label>
+        <input type="number" id="fontSize" placeholder="16" min="10" required>
+
+        <label for="fontFamily">Font Family:</label>
+        <input type="text" id="fontFamily" placeholder="sans-serif" required>
+
+        <label><input type="checkbox" id="nightTheme" checked> Generate Night Theme</label>
+
+        <button type="button" onclick="generateFilesAndPreview()">Generate Theme Preview and Files</button>
+    </form>
+
+    <div id="colorPreview" class="color-palette"></div>
+
+    <div class="output-container">
+        <h2>Generated XML Files</h2>
+        <div id="xmlOutput"></div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
