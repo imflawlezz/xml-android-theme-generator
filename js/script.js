@@ -16,8 +16,6 @@ function generateShades(hex, method) {
 		// misc group
 		background: tinycolor(hex).lighten(30).desaturate(25).toHexString(),
 		backgroundNight: tinycolor(hex).darken(20).desaturate(50).toHexString(),
-		
-		//nightTextPrimary: tinycolor(hex).lighten(60).toHexString()
 	};
 		// secondary group
 	if (method === 'complementary') {
@@ -64,6 +62,8 @@ function createThemesXml(fontSize, fontFamily, appName) {
 
         <item name="android:fontFamily">${fontFamily}</item>
         <item name="android:textSize">${fontSize}sp</item>
+        
+        <item name="android:windowBackground">@color/background</item>
     </style>
 </resources>`;
 }
