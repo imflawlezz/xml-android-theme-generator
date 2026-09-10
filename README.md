@@ -1,3 +1,5 @@
+> **Archived.** This project is no longer maintained and is kept for reference only.
+
 # xml-android-theme-generator
 Simple tool for creating XML-based themes for Android apps.
 
